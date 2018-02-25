@@ -2,14 +2,11 @@
   "name": "iotagent-json",
   "description": "IoT Agent for the JSON protocol",
   "version": "1.6.0-next",
-  "homepage": "https://github.com/telefonicaid/iotagent-json",
-  "author": {
-    "name": "Daniel Moran",
-    "email": "dmj@tid.es"
-  },
+  "homepage": "https://github.com/agaldemas/iotagent-json",
+  "author": "Daniel Moran <dmj@tid.es>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/telefonicaid/iotagent-json.git"
+    "url": "git+https://github.com/agaldemas/iotagent-json.git"
   },
   "bugs": {
     "url": "https://github.com/telefonicaid/iotagent-json/issues"
@@ -47,16 +44,24 @@
   },
   "keywords": [],
   "dependencies": {
+    "amqplib": "^0.5.1",
     "async": "1.5.2",
-    "express": "^4.11.2",
     "body-parser": "1.15.0",
     "dateformat": "1.0.12",
-    "amqplib": "^0.5.1",
-    "iotagent-node-lib": "https://github.com/telefonicaid/iotagent-node-lib.git#master",
-    "logops": "1.0.0-alpha.7",
+    "express": "^4.11.2",
+    "iotagent-node-lib": "git+https://github.com/agaldemas/iotagent-node-lib.git#master",
+    "mongodb": "2.2.10",
     "mqtt": "1.7.0",
     "request": "^2.69.0",
-    "mongodb": "2.2.10",
     "underscore": "1.8.3"
-  }
+  },
+  "bin": {
+    "iotagent-json": "iotaJsonTester.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC"
 }
